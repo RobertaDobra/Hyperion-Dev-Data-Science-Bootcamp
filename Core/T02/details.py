@@ -1,0 +1,5 @@
+name=str(input())
+age=str(input())
+house_number=str(input())
+street_name=str(input())
+print("This is " + name + "." + " The user lives at house number " + house_number + " on " + street_name + ".")

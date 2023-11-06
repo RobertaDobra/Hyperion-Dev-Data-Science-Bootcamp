@@ -1,0 +1,10 @@
+x=str(input("enter item1 from shopping list "))
+y=str(input("enter item2 from shopping list "))
+z=str(input("enter item3 from shopping list "))
+a=float(input("enter price of item1 "))
+b=float(input("enter price of item1 "))
+c=float(input("enter price of item1 "))
+sum=round(a+b+c)
+avg=round(sum/3)
+
+print("The total of " + x + ", " + y + ", " + z + " is " + str(sum) + " and the average price of the items is " + str(avg) + ".")

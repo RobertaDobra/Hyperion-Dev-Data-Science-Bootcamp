@@ -1,0 +1,7 @@
+str_manip=str(input("Enter a sentence:"))
+str_manip=str_manip.replace(str_manip[-1], "@")
+print(str_manip)
+print(str_manip[:-4:-1])
+x=(str_manip[:3])
+y=(str_manip[-2:])
+print(x+y)

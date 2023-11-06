@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS Student (
+    STU_NUM CHAR(6),
+    STU_SNAME VARCHAR(15),
+    STU_FNAME VARCHAR(15),
+  	STU_INITIAL CHAR(1),
+  	STU_STARTDATE DATE,
+  	COURSE_CODE CHAR(3),
+  	PROJ_NUM INT(2)
+	); #create table with columns and constraints on columns
+
+INSERT INTO Student
+VALUES ('01', 'Snow', 'John', 'E', 05/04/2014, '201', 6),
+        ('02', 'Stark', 'Arya', 'C', 12/06/2017, '305', 11),
+        ('03', 'Lannister', 'Jamie', 'C', 05/09/2012, '101', 2),
+        ('04', 'Lannister', 'Cercei', 'J', 05/09/2012, '101', 2),
+        ('05', 'Greyjoy', 'Theon', 'I', 09/12/2015, '402', 14),
+        ('06', 'Tyrell', 'Margaery', 'Y', 12/07/2017, '305', 10),
+        ('07', 'Baratheon', 'Tommen', 'R', 13/06/2019, '201', 5); #insert rows with values for columns in this order
+
+SELECT * FROM Student WHERE COURSE_CODE='05'; #displays rows with condition where...
+
+UPDATE Student SET COURSE_CODE='304' WHERE STU_NUM='07'; #updates rows changing course code to 304 where stu_num is..
+
+DELETE FROM Student WHERE STU_SNAME='Lannister’ AND STU_FNAME=’Jamie’ AND STU_STARTDATE= 05/09/2012 AND COURSE_CODE=’101’ AND PROJ_NUM=2; #deletes rows with given condition for column = ...
+
+UPDATE Student SET PROJ_NUM=14 WHERE STU_STARTDATE<01/01/2016 AND COURSE_CODE >= ‘201’;
+
+TRUNCATE TABLE Student; #deletes rows from table, leaving table with columns and constraints on columns
+
+DROP TABLE Student #delete whole table
